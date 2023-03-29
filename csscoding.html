@@ -1,0 +1,158 @@
+<html>
+  <head>
+    <style>
+    
+    @keyframes typing {
+      from { width: 0 }
+  to { width: 45% }
+}
+
+/* The typewriter cursor effect */
+@keyframes blink-caret {
+  from, to { border-color: transparent }
+  50% { border-color: orange; }
+}
+
+      body {
+  background: linear-gradient(to bottom, #f6d365 0%, #fda085 100%);
+}
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+}
+
+.box {
+  background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: reveal infinite;
+  animation: slide-in 1s ease-out;
+  
+  transition: transform 1s, background-color 1s;
+  transform-style: preserve-3d;
+}
+
+.box:hover {
+  transform: rotateY(180deg);
+  background-color: #333;
+}
+
+.title {
+    transform: rotateY(180deg);
+  font-size: 36px;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 30px;
+  animation: fade-in 1s ease-out;
+  backface-visibility: hidden;
+}
+
+.description {
+  font-size: 18px;
+  color: #bbb;
+  animation: fade-in 1s ease-out;
+  backface-visibility: hidden;
+}
+
+@keyframes slide-in {
+  from {
+    transform: translateY(-50%);
+  }
+  to {
+    transform: translateY(0%);
+  }
+}
+
+@keyframes fade-in {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes reveal {
+  from {
+    background-color: #fff;
+  border-radius: 10px;
+  box-shadow: 0px 0px 10px 2px rgba(0, 0, 0, 0.1);
+  width: 500px;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  animation: reveal infinite;
+  animation: slide-in 1s ease-out;
+  
+  transition: transform 1s, background-color 1s;
+  transform-style: preserve-3d;
+  }
+  to {
+    transform: rotateY(180deg);
+    background-color: #333;
+  }  
+}
+.more {
+  border: 1px black solid;
+  margin: 13px;
+}
+.more2{
+  padding: 13px;
+  width: 100px;
+  border: 1px black solid;
+  overflow: hidden; /* Ensures the content is not revealed until the animation */
+  margin: 0 13px; /* Gives that scrolling effect as the typing happens */
+  letter-spacing: .15em; /* Adjust as needed */
+  animation: 
+    typing 3.5s,
+    
+    blink-caret .75s;
+}
+.more a {
+  text-decoration: none;
+  color: black;
+}
+.more a:hover {
+  text-decoration: none;
+  color: whitesmoke;
+}
+.more:hover {
+  background-color: #333;
+  text-decoration: none;
+  color: white;
+}
+
+
+    </style>
+  </head>
+  <body>
+
+    
+    <div class="container">  
+      <div class="more2">
+        <h3>If You are in a mobile , try long touch</h3>
+      </div>
+      <div class="box">
+        
+        <h1>hover me</h1>
+        <div class="title">The things that you want will be a sacrrifice</div>
+        <div class="description">If you don't saccrifice for the things you want</div>
+      </div>
+      <div class="more">
+        <a href="http://127.0.0.1:5500/magic.html"><h1>View More</h1>
+      </div>
+    </div>
+    
+  </body>
+</html>
